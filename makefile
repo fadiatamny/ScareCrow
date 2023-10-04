@@ -30,3 +30,7 @@ $(EXECUTABLE): $(OBJECTS)
 
 clean:
 	$(RM) $(EXECUTABLE) $(OBJECTS)
+
+rebuild:$(OBJECTS)
+	$(RM) $(EXECUTABLE)
+	$(CXX) $(CXXFLAGS) $^ -o $(EXECUTABLE)

@@ -2,14 +2,13 @@
 #define USER_ROUTER_HPP
 
 #include "crow.h"
-#include "../controllers/user.controller.hpp"
+#include "../controllers/UserController/user.controller.hpp"
 
 class UserRouter
 {
 public:
     UserRouter(crow::SimpleApp &app) : _app(app)
     {
-        this->_controller = UserController();
         this->get();
         this->create();
     }
